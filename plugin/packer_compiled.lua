@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["copilot.lua"] = {
+    loaded = true,
+    path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.lua",
+    url = "https://github.com/zbirenbaum/copilot.lua"
+  },
   ["emmet-vim"] = {
     loaded = true,
     path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\emmet-vim",
@@ -99,6 +104,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -130,25 +142,15 @@ _G.packer_plugins = {
     path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-ui"] = {
-    loaded = true,
-    path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-dap-ui",
-    url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-nio"] = {
+  ["oil.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-nio",
-    url = "https://github.com/nvim-neotest/nvim-nio"
+    path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\oil.nvim",
+    url = "https://github.com/stevearc/oil.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -192,6 +194,13 @@ time([[Defining packer_plugins]], false)
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23current_line_blame\2\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
 time([[Config for gitsigns.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
