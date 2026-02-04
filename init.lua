@@ -79,38 +79,6 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.termguicolors = true
 
-
-
--- Emmet leader key
-vim.g.user_emmet_leader_key = '<C-y>'
-
--- Expand Emmet abbreviation safely
-vim.g.user_emmet_expandabbr_key = '<C-y>,'  -- press Ctrl+y then comma to expand
-
-
-
-vim.g.user_emmet_settings = {
-  html = {
-    snippets = {
-      ["!"] = [[
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  $0
-</body>
-</html>
-      ]],
-    },
-  },
-}
-
-
-
 -- =====================
 -- KEYMAPS
 -- =====================
