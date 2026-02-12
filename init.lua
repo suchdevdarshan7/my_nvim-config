@@ -95,7 +95,7 @@ end)
 -- =====================
 -- THEME
 -- =====================
-require("rose-pine").setup({ variant = "moon" })
+require("rose-pine").setup({ variant = "moon" , disable_background= true})
 vim.cmd("colorscheme rose-pine")
 
 -- =====================

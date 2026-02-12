@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["copilot.lua"] = {
-    loaded = true,
-    path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.lua",
-    url = "https://github.com/zbirenbaum/copilot.lua"
-  },
   ["emmet-vim"] = {
     loaded = true,
     path = "C:\\Users\\suchd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\emmet-vim",
